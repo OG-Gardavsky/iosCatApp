@@ -7,6 +7,13 @@
 
 import Foundation
 
+//struct BreedImage {
+//    let id: String
+//    let width: Int
+//    let height: Int
+//    let url: String
+//}
+
 struct Breed: Identifiable {
     let id: String
     let name: String
@@ -17,6 +24,7 @@ struct Breed: Identifiable {
     let origin: String
     let weight_imperial: String
     let description: String
+//    let image?: BreedImage
     
 }
 
