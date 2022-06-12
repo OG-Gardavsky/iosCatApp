@@ -14,7 +14,7 @@ import Foundation
 //    let url: String
 //}
 
-struct Breed: Identifiable {
+struct Breed: Identifiable, Decodable {
     let id: String
     let name: String
     let temperament: String

@@ -21,6 +21,8 @@
 		300596DE284E20D7009665F2 /* HTTPHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300596D7284E20D7009665F2 /* HTTPHeader.swift */; };
 		300596DF284E20D7009665F2 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300596D8284E20D7009665F2 /* Endpoint.swift */; };
 		300596E2284F2EB4009665F2 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300596E1284F2EB4009665F2 /* Logger.swift */; };
+		300596E428567BBE009665F2 /* BreedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300596E328567BBE009665F2 /* BreedStore.swift */; };
+		300596E728567E80009665F2 /* DecodableRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300596E628567E80009665F2 /* DecodableRes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		300596D7284E20D7009665F2 /* HTTPHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPHeader.swift; sourceTree = "<group>"; };
 		300596D8284E20D7009665F2 /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		300596E1284F2EB4009665F2 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		300596E328567BBE009665F2 /* BreedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedStore.swift; sourceTree = "<group>"; };
+		300596E628567E80009665F2 /* DecodableRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableRes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,7 @@
 		300596B7284DDF07009665F2 /* iosCatApp */ = {
 			isa = PBXGroup;
 			children = (
+				300596E528567E61009665F2 /* utils */,
 				300596E0284F2E91009665F2 /* Logger */,
 				300596CF284E20D7009665F2 /* API */,
 				300596CA284E0F23009665F2 /* Model */,
@@ -104,6 +109,7 @@
 			children = (
 				300596C8284E09D0009665F2 /* BreedListView.swift */,
 				300596CD284E1519009665F2 /* BreedListItemView.swift */,
+				300596E328567BBE009665F2 /* BreedStore.swift */,
 			);
 			path = Breeds;
 			sourceTree = "<group>";
@@ -151,6 +157,14 @@
 				300596E1284F2EB4009665F2 /* Logger.swift */,
 			);
 			path = Logger;
+			sourceTree = "<group>";
+		};
+		300596E528567E61009665F2 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				300596E628567E80009665F2 /* DecodableRes.swift */,
+			);
+			path = utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				300596DB284E20D7009665F2 /* APIManager.swift in Sources */,
+				300596E428567BBE009665F2 /* BreedStore.swift in Sources */,
 				300596CC284E1083009665F2 /* Breed.swift in Sources */,
 				300596CE284E1519009665F2 /* BreedListItemView.swift in Sources */,
 				300596BB284DDF07009665F2 /* ContentView.swift in Sources */,
@@ -232,6 +247,7 @@
 				300596B9284DDF07009665F2 /* iosCatAppApp.swift in Sources */,
 				300596DE284E20D7009665F2 /* HTTPHeader.swift in Sources */,
 				300596E2284F2EB4009665F2 /* Logger.swift in Sources */,
+				300596E728567E80009665F2 /* DecodableRes.swift in Sources */,
 				300596DD284E20D7009665F2 /* HTTPMethod.swift in Sources */,
 				300596DF284E20D7009665F2 /* Endpoint.swift in Sources */,
 				300596DC284E20D7009665F2 /* APIError.swift in Sources */,

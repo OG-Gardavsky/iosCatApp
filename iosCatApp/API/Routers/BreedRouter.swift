@@ -8,20 +8,20 @@
 import Foundation
 
 enum BreedRouter {
-    case getBreeds(Void)
+    case getBreeds
 }
 
 extension BreedRouter: Endpoint {
     var path: String {
         switch self {
-        case .getBreeds():
+        case .getBreeds:
             return "breeds"
         }
     }
 
     var urlParamaters: [String : Any]? {
         switch self {
-        case .getBreeds():
+        case .getBreeds:
             return nil
         }
     }
