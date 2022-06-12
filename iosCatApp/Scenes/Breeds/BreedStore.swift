@@ -42,6 +42,8 @@ private extension BreedStore {
             let response: DecodableRes<Breed> = try await apiManager.request(endpoint)
             breeds += response.results
             
+            print(breeds)
+            
             state = .finished
             
         } catch {

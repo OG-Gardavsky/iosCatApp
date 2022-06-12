@@ -11,20 +11,50 @@ import SwiftUI
 
 struct BreedListView: View {
     
+    @StateObject var store = BreedStore()
+    
+    
     
     var body: some View {
         ZStack {
             ScrollView{
                 
-                ForEach(Breed.mockList) { breed in
-                    
-                    BreedListItemView(breed: breed)
-                    
+                switch store.state {
+                case .finished:
+                    content
+                case .initial, .loading:
+                    ProgressView()
+                case .failed:
+                    Text("🥲🥲🥲 Something went wrong")
                 }
+                
+                
+                
                 
             }
         }
         .navigationTitle("Breeds")
+        .onFirstAppear(perform: load)
         
+        
+    }
+}
+
+
+extension BreedListView  {
+    func load() {
+        Task {
+            await store.load()
+        }
+    }
+    
+    @ViewBuilder var content: some View {
+        ScrollView {
+            ForEach(store.breeds) { breed in
+                
+                BreedListItemView(breed: breed)
+                
+            }
+        }
     }
 }

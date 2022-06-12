@@ -23,6 +23,7 @@
 		300596E2284F2EB4009665F2 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300596E1284F2EB4009665F2 /* Logger.swift */; };
 		300596E428567BBE009665F2 /* BreedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300596E328567BBE009665F2 /* BreedStore.swift */; };
 		300596E728567E80009665F2 /* DecodableRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300596E628567E80009665F2 /* DecodableRes.swift */; };
+		300596E928568456009665F2 /* OnFirstAppearViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300596E828568456009665F2 /* OnFirstAppearViewModifier.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		300596E1284F2EB4009665F2 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		300596E328567BBE009665F2 /* BreedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedStore.swift; sourceTree = "<group>"; };
 		300596E628567E80009665F2 /* DecodableRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableRes.swift; sourceTree = "<group>"; };
+		300596E828568456009665F2 /* OnFirstAppearViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnFirstAppearViewModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +165,7 @@
 			isa = PBXGroup;
 			children = (
 				300596E628567E80009665F2 /* DecodableRes.swift */,
+				300596E828568456009665F2 /* OnFirstAppearViewModifier.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				300596CE284E1519009665F2 /* BreedListItemView.swift in Sources */,
 				300596BB284DDF07009665F2 /* ContentView.swift in Sources */,
 				300596C9284E09D0009665F2 /* BreedListView.swift in Sources */,
+				300596E928568456009665F2 /* OnFirstAppearViewModifier.swift in Sources */,
 				300596D9284E20D7009665F2 /* BreedRouter.swift in Sources */,
 				300596B9284DDF07009665F2 /* iosCatAppApp.swift in Sources */,
 				300596DE284E20D7009665F2 /* HTTPHeader.swift in Sources */,
