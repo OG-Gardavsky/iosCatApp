@@ -6,21 +6,23 @@
 //
 
 import SwiftUI
-import SDWebImageSwiftUI
+//import SDWebImageSwiftUI
 
 struct BreedListItemView: View {
     let breed: Breed
     
     var body: some View {
         
-        WebImage(url: breed.image.url)
-            .placeholder {
-                ProgressView()
-            }
-//            .resizable()
-//            .aspectRatio(contentMode: .fill)
-//            .clipShape(RoundedRectangle(cornerRadius: 8))
-//            .frame(width: 110, height: 110)
+//        WebImage(url: breed.image.url)
+//            .placeholder {
+//                ProgressView()
+//            }
+        
+        Image("cat")
+            .resizable()
+            .aspectRatio(contentMode: .fill)
+            .clipShape(RoundedRectangle(cornerRadius: 8))
+            .frame(width: 110, height: 110)
         
         Text(breed.name)
     }
