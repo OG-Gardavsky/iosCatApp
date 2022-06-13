@@ -40,7 +40,7 @@ extension Breed {
             origin: "Izrael",
             weight_imperial: "0.5",
             description: "lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum",
-            image: .init(id: "ozEvzdVM-", width: 1200, height: 800, life_span: "https://cdn2.thecatapi.com/images/ozEvzdVM-.jpg")
+            image: .init(id: "ozEvzdVM-", width: 1200, height: 800, url: "https://cdn2.thecatapi.com/images/ozEvzdVM-.jpg")
         ),
         .init(
             id: "das",
@@ -52,7 +52,7 @@ extension Breed {
             origin: "Izrael",
             weight_imperial: "0.5",
             description: "lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum",
-            image: .init(id: "ozEvzdVM-", width: 1200, height: 800, life_span: "https://cdn2.thecatapi.com/images/ozEvzdVM-.jpg")
+            image: .init(id: "ozEvzdVM-", width: 1200, height: 800, url: "https://cdn2.thecatapi.com/images/ozEvzdVM-.jpg")
         )
     ]
 }
