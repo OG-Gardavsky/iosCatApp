@@ -9,6 +9,6 @@ import SwiftUI
 
 struct BreedDetailView: View {
     var body: some View {
-        Text("toto je  detail")
+        BreedInfoRow(name: "weight", value: "10")
     }
 }

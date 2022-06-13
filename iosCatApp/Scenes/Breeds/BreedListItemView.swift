@@ -13,18 +13,25 @@ struct BreedListItemView: View {
     
     var body: some View {
         
-//        WebImage(url: breed.image.url)
-//            .placeholder {
-//                ProgressView()
-//            }
+
         
-        Image("cat")
-            .resizable()
-            .aspectRatio(contentMode: .fill)
-            .clipShape(RoundedRectangle(cornerRadius: 8))
-            .frame(width: 110, height: 110)
+        VStack(alignment: .leading, spacing: 8) {
+            
+            Text(breed.name)
+                .font(.title2)
+                .foregroundColor(.black)
+            
+            Image("cat")
+                .resizable()
+                .aspectRatio(contentMode: .fill)
+                .clipShape(RoundedRectangle(cornerRadius: 8))
+            
+            
+        }
+        .padding(12)
         
-        Text(breed.name)
+        
+        
     }
 }
 
