@@ -24,6 +24,8 @@
 		300596E428567BBE009665F2 /* BreedStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300596E328567BBE009665F2 /* BreedStore.swift */; };
 		300596E728567E80009665F2 /* DecodableRes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300596E628567E80009665F2 /* DecodableRes.swift */; };
 		300596E928568456009665F2 /* OnFirstAppearViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300596E828568456009665F2 /* OnFirstAppearViewModifier.swift */; };
+		300596EC285791E7009665F2 /* BreedDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300596EB285791E7009665F2 /* BreedDetailView.swift */; };
+		300596EE28579FDD009665F2 /* BreedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300596ED28579FDD009665F2 /* BreedImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,8 @@
 		300596E328567BBE009665F2 /* BreedStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedStore.swift; sourceTree = "<group>"; };
 		300596E628567E80009665F2 /* DecodableRes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableRes.swift; sourceTree = "<group>"; };
 		300596E828568456009665F2 /* OnFirstAppearViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnFirstAppearViewModifier.swift; sourceTree = "<group>"; };
+		300596EB285791E7009665F2 /* BreedDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailView.swift; sourceTree = "<group>"; };
+		300596ED28579FDD009665F2 /* BreedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +104,7 @@
 		300596C6284DFC29009665F2 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				300596EA285791CE009665F2 /* BreedDetail */,
 				300596C7284E093D009665F2 /* Breeds */,
 				300596BA284DDF07009665F2 /* ContentView.swift */,
 			);
@@ -120,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				300596CB284E1083009665F2 /* Breed.swift */,
+				300596ED28579FDD009665F2 /* BreedImage.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,6 +174,14 @@
 				300596E828568456009665F2 /* OnFirstAppearViewModifier.swift */,
 			);
 			path = utils;
+			sourceTree = "<group>";
+		};
+		300596EA285791CE009665F2 /* BreedDetail */ = {
+			isa = PBXGroup;
+			children = (
+				300596EB285791E7009665F2 /* BreedDetailView.swift */,
+			);
+			path = BreedDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -240,9 +254,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				300596EC285791E7009665F2 /* BreedDetailView.swift in Sources */,
 				300596DB284E20D7009665F2 /* APIManager.swift in Sources */,
 				300596E428567BBE009665F2 /* BreedStore.swift in Sources */,
 				300596CC284E1083009665F2 /* Breed.swift in Sources */,
+				300596EE28579FDD009665F2 /* BreedImage.swift in Sources */,
 				300596CE284E1519009665F2 /* BreedListItemView.swift in Sources */,
 				300596BB284DDF07009665F2 /* ContentView.swift in Sources */,
 				300596C9284E09D0009665F2 /* BreedListView.swift in Sources */,

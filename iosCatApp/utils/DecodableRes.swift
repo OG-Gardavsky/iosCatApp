@@ -9,7 +9,7 @@
 import Foundation
 
 struct DecodableRes<T: Decodable> {
-    let results: [T]
+    let body: [T]
 }
 
 extension DecodableRes: Decodable {}
