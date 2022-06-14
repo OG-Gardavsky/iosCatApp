@@ -38,6 +38,8 @@ struct BreedListItemView: View {
                         ProgressView()
                     }
                 )
+            } else  {
+                Image(systemName: "xmark.bin")
             }
             
             
