@@ -11,7 +11,11 @@ import SwiftUI
 struct BreedListItemView: View {
     let breed: Breed
     
+    
+    
     var body: some View {
+        
+        
         
 
         
@@ -21,10 +25,20 @@ struct BreedListItemView: View {
                 .font(.title2)
                 .foregroundColor(.black)
             
-            Image("cat")
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .clipShape(RoundedRectangle(cornerRadius: 8))
+            
+            
+            if breed.image?.url != nil{
+                AsyncImage(
+                    url: URL(string: breed.image!.url!),
+                    content: { image in
+                        image.resizable()
+                             .aspectRatio(contentMode: .fit)
+                    },
+                    placeholder: {
+                        ProgressView()
+                    }
+                )
+            }
             
             
         }

@@ -48,7 +48,13 @@ extension BreedListView  {
         ScrollView {
             ForEach(store.breeds) { breed in
                 
+                
+                
+                
+                
                 NavigationLink(destination: BreedDetailView(breed: breed) ){
+                    
+                    
                     
                     BreedListItemView(breed: breed)
                     

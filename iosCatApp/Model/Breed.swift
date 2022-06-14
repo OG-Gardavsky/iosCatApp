@@ -7,11 +7,6 @@
 
 import Foundation
 
-
-
-
-
-
 struct Breed: Identifiable, Decodable {
     let id: String?
     let name: String?
