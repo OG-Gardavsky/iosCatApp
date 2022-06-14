@@ -14,7 +14,6 @@ struct BreedListView: View {
     @StateObject var store = BreedStore()
     
     
-    
     var body: some View {
         ZStack {
             ScrollView{
@@ -27,11 +26,6 @@ struct BreedListView: View {
                 case .failed:
                     Text("🥲🥲🥲 Something went wrong")
                 }
-                
-                content
-                
-                
-                
                 
             }
         }
@@ -52,7 +46,7 @@ extension BreedListView  {
     
     @ViewBuilder var content: some View {
         ScrollView {
-            ForEach(Breed.mockList) { breed in
+            ForEach(store.breeds) { breed in
                 
                 NavigationLink(destination: BreedDetailView(breed: breed) ){
                     

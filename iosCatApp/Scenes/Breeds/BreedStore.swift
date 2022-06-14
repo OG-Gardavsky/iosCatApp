@@ -40,19 +40,9 @@ private extension BreedStore {
         do {
 
             let response = try await apiManager.request(endpoint)
-
-            print("---------------")
-            print(response)
+            let object = try  apiManager.decoder.decode([Breed].self, from: response)
             
-//            let object = try  apiManager.decoder.decode([Breed].self, from: response)
-            
-            
-            let decoder = JSONDecoder()
-            let object = try decoder.decode([Breed].self, from: response)
-            
-            print(object)
-            
-            
+            breeds = object
             state = .finished
 
         } catch {
