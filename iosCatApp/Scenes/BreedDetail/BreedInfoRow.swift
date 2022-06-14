@@ -13,7 +13,7 @@ struct BreedInfoRow: View {
     let value: String
     
     var body: some View {
-        HStack {
+        HStack(alignment: .top) {
             Text("\(name)")
             Text("\(value)")
         }

@@ -7,24 +7,22 @@
 
 import Foundation
 
-//struct BreedImage {
-//    let id: String
-//    let width: Int
-//    let height: Int
-//    let url: String
-//}
+
+
+
+
 
 struct Breed: Identifiable, Decodable {
-    let id: String
-    let name: String
-    let temperament: String
-    let life_span: String
-    let alt_names: String
-    let wikipedia_url: String
-    let origin: String
-    let weight_imperial: String
-    let description: String
-    let image: BreedImage
+    let id: String?
+    let name: String?
+    let temperament: String?
+    let life_span: String?
+    let alt_names: String?
+    let wikipedia_url: String?
+    let origin: String?
+    let weight_imperial: String?
+    let description: String?
+    let image: BreedImage?
 }
 
 

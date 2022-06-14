@@ -11,7 +11,7 @@ import SwiftUI
 
 struct BreedListView: View {
     
-//    @StateObject var store = BreedStore()
+    @StateObject var store = BreedStore()
     
     
     
@@ -19,14 +19,14 @@ struct BreedListView: View {
         ZStack {
             ScrollView{
                 
-//                switch store.state {
-//                case .finished:
-//                    content
-//                case .initial, .loading:
-//                    ProgressView()
-//                case .failed:
-//                    Text("🥲🥲🥲 Something went wrong")
-//                }
+                switch store.state {
+                case .finished:
+                    content
+                case .initial, .loading:
+                    ProgressView()
+                case .failed:
+                    Text("🥲🥲🥲 Something went wrong")
+                }
                 
                 content
                 
@@ -36,7 +36,7 @@ struct BreedListView: View {
             }
         }
         .navigationTitle("Breeds")
-//        .onFirstAppear(perform: load)
+        .onFirstAppear(perform: load)
         
         
     }
@@ -44,17 +44,17 @@ struct BreedListView: View {
 
 
 extension BreedListView  {
-//    func load() {
-//        Task {
-//            await store.load()
-//        }
-//    }
+    func load() {
+        Task {
+            await store.load()
+        }
+    }
     
     @ViewBuilder var content: some View {
         ScrollView {
             ForEach(Breed.mockList) { breed in
                 
-                NavigationLink(destination: BreedDetailView() ){
+                NavigationLink(destination: BreedDetailView(breed: breed) ){
                     
                     BreedListItemView(breed: breed)
                     

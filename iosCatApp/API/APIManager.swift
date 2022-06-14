@@ -7,13 +7,9 @@
 
 import Foundation
 
-// MARK: - Protocol
-protocol APIManaging {
-    func request<T: Decodable>(_ endpoint: Endpoint) async throws -> T
-}
 
 // MARK: - Implementation
-final class APIManager: APIManaging {
+final class APIManager {
     
     private lazy var urlSession: URLSession = {
         let config = URLSessionConfiguration.default
@@ -23,16 +19,15 @@ final class APIManager: APIManaging {
         return URLSession(configuration: config)
     }()
 
-    private lazy var decoder: JSONDecoder = {
+    lazy var decoder: JSONDecoder = {
         let decoder = JSONDecoder()
 
         decoder.keyDecodingStrategy = .convertFromSnakeCase
-//        decoder.dateDecodingStrategy = .formatted(dateFormatter)
 
         return decoder
     }()
 
-    private func request(_ endpoint: Endpoint) async throws -> Data {
+    func request(_ endpoint: Endpoint) async throws -> Data {
         let request: URLRequest = try endpoint.asRequest()
         
         Logger.log("🚀 Request for \"\(request.description)\"")
@@ -56,14 +51,8 @@ final class APIManager: APIManaging {
             \(body)
             """)
         }
+        
 
         return data
-    }
-
-    func request<T: Decodable>(_ endpoint: Endpoint) async throws -> T {
-        let data = try await request(endpoint)
-        let object = try decoder.decode(T.self, from: data)
-
-        return object
     }
 }

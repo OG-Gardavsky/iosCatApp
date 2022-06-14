@@ -17,7 +17,7 @@ struct BreedListItemView: View {
         
         VStack(alignment: .leading, spacing: 8) {
             
-            Text(breed.name)
+            Text(breed.name!)
                 .font(.title2)
                 .foregroundColor(.black)
             
