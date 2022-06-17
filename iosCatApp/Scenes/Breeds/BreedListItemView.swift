@@ -42,9 +42,11 @@ struct BreedListItemView: View {
                 Image(systemName: "xmark.bin")
             }
             
+            Divider()
+            
             
         }
-        .padding(12)
+        .padding(8)
         
         
         

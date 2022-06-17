@@ -15,7 +15,7 @@ struct Breed: Identifiable, Decodable {
     let alt_names: String?
     let wikipedia_url: String?
     let origin: String
-    let weight_imperial: String?
+    let weight_imperial: String?	
     let description: String
     let image: BreedImage?
 }

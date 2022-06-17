@@ -15,7 +15,9 @@ struct BreedInfoRow: View {
     var body: some View {
         HStack(alignment: .top) {
             Text("\(name)")
+            Spacer()
             Text("\(value)")
+            Divider()
         }
         
     }

@@ -13,32 +13,60 @@ struct BreedDetailView: View {
     
     var body: some View {
         
-        if breed.wikipedia_url != nil {
-            Button("wiki") {
-                print("tipped")
-            }
-        }
-        
-        Button("wiki") {
-            print("tipped")
-            print("\(breed)")
-        }
-        
-        if breed.image?.url != nil{
-            AsyncImage(
-                url: URL(string: breed.image!.url!),
-                content: { image in
-                    image.resizable()
-                         .aspectRatio(contentMode: .fit)
-                },
-                placeholder: {
-                    ProgressView()
+        ScrollView {
+            VStack(alignment: .leading, spacing: 8) {
+                
+                
+                Text(breed.name)
+                    .font(.title2)
+                    .foregroundColor(.black)
+                
+                if breed.wikipedia_url != nil {
+                    Button("wiki") {
+                        print("tipped")
+                    }
                 }
-            )
-        } else  {
-            Image(systemName: "xmark.bin")
+                
+                if breed.image?.url != nil{
+                    AsyncImage(
+                        url: URL(string: breed.image!.url!),
+                        content: { image in
+                            image.resizable()
+                                 .aspectRatio(contentMode: .fit)
+                        },
+                        placeholder: {
+                            ProgressView()
+                        }
+                    )
+                } else  {
+                    Image(systemName: "xmark.bin")
+                }
+                
+                Text(breed.description)
+                Divider()
+                
+                BreedInfoRow(name: "Origin", value: breed.origin)
+                
+                if breed.origin != nil {
+                    BreedInfoRow(name: "Temperament", value: breed.temperament)
+                }
+                
+                
+                
+                
+                
+                
+                if breed.origin != nil {
+                    BreedInfoRow(name: "Origin", value: breed.temperament)
+                }
+                
+                
+                
+            }
+            .padding(8)
         }
         
-        Text(breed.description)
+        
+   
     }
 }
