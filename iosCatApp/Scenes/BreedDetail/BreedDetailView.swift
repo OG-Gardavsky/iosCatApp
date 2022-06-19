@@ -49,6 +49,8 @@ struct BreedDetailView: View {
                 
                 BreedInfoRow(name: "Origin", value: breed.origin)
                 BreedInfoRow(name: "Temperament", value: breed.temperament)
+                BreedInfoRow(name: "Imperial Weight", value: breed.weight.imperial)
+//                BreedInfoRow(name: "Metric Weight", value: breed.weight.metric)
                 
                 if breed.altNames != nil {
                     BreedInfoRow(name: "Alt names", value: breed.altNames!)
