@@ -61,15 +61,9 @@ struct BreedDetailView: View {
                 if breed.altNames != nil {
                     BreedInfoRow(name: "Alt names", value: breed.altNames!)
                 }
-                if breed.weightImperial != nil {
-                    BreedInfoRow(name: "Weight imperial", value: breed.weightImperial!)
-                }
-                
                 if breed.lifeSpan != nil {
                     BreedInfoRow(name: "Life span", value: breed.lifeSpan!)
                 }
-                
-                
                 
                 if (breed.wikipediaUrl != nil) {
                     Divider()
