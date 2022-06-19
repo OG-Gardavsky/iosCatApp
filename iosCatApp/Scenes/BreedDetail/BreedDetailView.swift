@@ -23,17 +23,13 @@ struct BreedDetailView: View {
                     .font(.title2)
                     .foregroundColor(.black)
                 
-                Button("wiki") {
-                    print("tipped")
-                    print("\(breed)")
-                    showWiki = true
-                }
-                
-//                if breed.wikipediaUrl != nil {
-//                    Button("wiki") {
-//                        print("tipped")
-//                    }
+//                Button("wiki") {
+//                    print("tipped")
+//                    print("\(breed)")
+//                    showWiki = true
 //                }
+                
+                
                 
                 if breed.image?.url != nil{
                     AsyncImage(
@@ -70,6 +66,14 @@ struct BreedDetailView: View {
                 if breed.lifeSpan != nil {
                     BreedInfoRow(name: "Life span", value: breed.lifeSpan!)
                 }
+                Divider()
+                
+                if breed.wikipediaUrl != nil {
+                    Text("Read more on")
+                    Button("Wikipedia") {
+                        showWiki = true
+                    }
+                }
                 
                 
                 
@@ -77,7 +81,7 @@ struct BreedDetailView: View {
             .padding(8)
         }
         .sheet(isPresented: $showWiki) {
-//            WebView(url: breed.wikipediaUrl)
+            WebView(url: breed.wikipediaUrl.unsafelyUnwrapped)
         }
         
         

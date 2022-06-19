@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Breed: Identifiable, Codable {
+struct Breed: Identifiable, Codable, CustomStringConvertible {
     let id: String
     let name: String
     let temperament: String
@@ -46,7 +46,7 @@ extension Breed {
             temperament:  "friendly",
             lifeSpan: "4",
             altNames: "other cat",
-            wikipediaUrl: URL(string: "wiku"),
+            wikipediaUrl: URL(string: "https://en.wikipedia.org/wiki/Abyssinian_(cat)"),
             origin: "Izrael",
             weightImperial: "0.5",
             description: "lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum",
@@ -58,7 +58,7 @@ extension Breed {
             temperament:  "friendly",
             lifeSpan: "4",
             altNames: "other cat",
-            wikipediaUrl: URL(string: "wiku"),
+            wikipediaUrl: URL(string: "https://en.wikipedia.org/wiki/Abyssinian_(cat)"),
             origin: "Izrael",
             weightImperial: "0.5",
             description: "lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum",

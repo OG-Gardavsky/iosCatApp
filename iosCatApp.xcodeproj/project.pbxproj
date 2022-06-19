@@ -28,6 +28,8 @@
 		300596EE28579FDD009665F2 /* BreedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 300596ED28579FDD009665F2 /* BreedImage.swift */; };
 		305F68A32857B5DB00122F68 /* BreedInfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305F68A22857B5DB00122F68 /* BreedInfoRow.swift */; };
 		305F68A5285CF19500122F68 /* utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 305F68A4285CF19500122F68 /* utils.swift */; };
+		30C00333285F9B160018A895 /* WebRenderingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C00332285F9B160018A895 /* WebRenderingView.swift */; };
+		30C00335285F9B500018A895 /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30C00334285F9B500018A895 /* WebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		300596ED28579FDD009665F2 /* BreedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedImage.swift; sourceTree = "<group>"; };
 		305F68A22857B5DB00122F68 /* BreedInfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedInfoRow.swift; sourceTree = "<group>"; };
 		305F68A4285CF19500122F68 /* utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = utils.swift; sourceTree = "<group>"; };
+		30C00332285F9B160018A895 /* WebRenderingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebRenderingView.swift; sourceTree = "<group>"; };
+		30C00334285F9B500018A895 /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +181,8 @@
 			children = (
 				300596E628567E80009665F2 /* DecodableRes.swift */,
 				300596E828568456009665F2 /* OnFirstAppearViewModifier.swift */,
+				30C00332285F9B160018A895 /* WebRenderingView.swift */,
+				30C00334285F9B500018A895 /* WebView.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -266,8 +272,10 @@
 				300596CC284E1083009665F2 /* Breed.swift in Sources */,
 				300596EE28579FDD009665F2 /* BreedImage.swift in Sources */,
 				300596CE284E1519009665F2 /* BreedListItemView.swift in Sources */,
+				30C00335285F9B500018A895 /* WebView.swift in Sources */,
 				300596BB284DDF07009665F2 /* ContentView.swift in Sources */,
 				300596C9284E09D0009665F2 /* BreedListView.swift in Sources */,
+				30C00333285F9B160018A895 /* WebRenderingView.swift in Sources */,
 				300596E928568456009665F2 /* OnFirstAppearViewModifier.swift in Sources */,
 				300596D9284E20D7009665F2 /* BreedRouter.swift in Sources */,
 				300596B9284DDF07009665F2 /* iosCatAppApp.swift in Sources */,
