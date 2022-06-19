@@ -23,14 +23,6 @@ struct BreedDetailView: View {
                     .font(.title2)
                     .foregroundColor(.black)
                 
-//                Button("wiki") {
-//                    print("tipped")
-//                    print("\(breed)")
-//                    showWiki = true
-//                }
-                
-                
-                
                 if breed.image?.url != nil{
                     AsyncImage(
                         url: URL(string: breed.image!.url!),
@@ -62,12 +54,13 @@ struct BreedDetailView: View {
                     BreedInfoRow(name: "Alt names", value: breed.altNames!)
                 }
                 if breed.lifeSpan != nil {
-                    BreedInfoRow(name: "Life span", value: breed.lifeSpan!)
+                    BreedInfoRow(name: "Life span", value: "\(breed.lifeSpan!) years")
                 }
                 
                 if (breed.wikipediaUrl != nil) {
                     Divider()
                     HStack {
+                        
                         Text("Read more on")
                         Button("Wikipedia") {
                             showWiki = true

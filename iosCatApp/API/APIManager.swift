@@ -22,7 +22,7 @@ final class APIManager {
     lazy var decoder: JSONDecoder = {
         let decoder = JSONDecoder()
 
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
+//        decoder.keyDecodingStrategy = .convertFromSnakeCase
 
         return decoder
     }()
