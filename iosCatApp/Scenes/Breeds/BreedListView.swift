@@ -33,6 +33,15 @@ struct BreedListView: View {
         .onFirstAppear(perform: load)
         
         
+        
+//        ZStack {
+//            ScrollView{
+//                content
+//            }
+//        }
+//        .navigationTitle("Breeds")
+        
+        
     }
 }
 
@@ -47,21 +56,12 @@ extension BreedListView  {
     @ViewBuilder var content: some View {
         ScrollView {
             ForEach(store.breeds) { breed in
-                
-                
-                
-                
+//            ForEach(Breed.mockList) { breed in
                 
                 NavigationLink(destination: BreedDetailView(breed: breed) ){
-                    
-                    
-                    
                     BreedListItemView(breed: breed)
                     
                 }
-                
-                
-                
             }
         }
     }

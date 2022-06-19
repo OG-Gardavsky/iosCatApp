@@ -46,18 +46,18 @@ struct BreedDetailView: View {
                 Divider()
                 
                 BreedInfoRow(name: "Origin", value: breed.origin)
+                BreedInfoRow(name: "Temperament", value: breed.temperament)
                 
-                if breed.origin != nil {
-                    BreedInfoRow(name: "Temperament", value: breed.temperament)
+                if breed.alt_names != nil {
+                    BreedInfoRow(name: "Alt names", value: breed.alt_names!)
                 }
                 
+                if breed.weight_imperial != nil {
+                    BreedInfoRow(name: "Weight imperial", value: breed.weight_imperial!)
+                }
                 
-                
-                
-                
-                
-                if breed.origin != nil {
-                    BreedInfoRow(name: "Origin", value: breed.temperament)
+                if breed.life_span != nil {
+                    BreedInfoRow(name: "Life span", value: breed.life_span!)
                 }
                 
                 
