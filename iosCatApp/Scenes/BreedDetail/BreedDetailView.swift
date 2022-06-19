@@ -6,26 +6,34 @@
 //
 
 import SwiftUI
+import WebKit
 
 struct BreedDetailView: View {
     let breed: Breed
+    @State private var showWiki = false
+    
+    
     
     
     var body: some View {
         
         ScrollView {
             VStack(alignment: .leading, spacing: 8) {
-                
-                
                 Text(breed.name)
                     .font(.title2)
                     .foregroundColor(.black)
                 
-                if breed.wikipedia_url != nil {
-                    Button("wiki") {
-                        print("tipped")
-                    }
+                Button("wiki") {
+                    print("tipped")
+                    print("\(breed)")
+                    showWiki = true
                 }
+                
+//                if breed.wikipediaUrl != nil {
+//                    Button("wiki") {
+//                        print("tipped")
+//                    }
+//                }
                 
                 if breed.image?.url != nil{
                     AsyncImage(
@@ -35,7 +43,11 @@ struct BreedDetailView: View {
                                  .aspectRatio(contentMode: .fit)
                         },
                         placeholder: {
-                            ProgressView()
+                            HStack(alignment: .center) {
+                                ProgressView()
+                            }
+                            
+                            
                         }
                     )
                 } else  {
@@ -48,22 +60,24 @@ struct BreedDetailView: View {
                 BreedInfoRow(name: "Origin", value: breed.origin)
                 BreedInfoRow(name: "Temperament", value: breed.temperament)
                 
-                if breed.alt_names != nil {
-                    BreedInfoRow(name: "Alt names", value: breed.alt_names!)
+                if breed.altNames != nil {
+                    BreedInfoRow(name: "Alt names", value: breed.altNames!)
+                }
+                if breed.weightImperial != nil {
+                    BreedInfoRow(name: "Weight imperial", value: breed.weightImperial!)
                 }
                 
-                if breed.weight_imperial != nil {
-                    BreedInfoRow(name: "Weight imperial", value: breed.weight_imperial!)
-                }
-                
-                if breed.life_span != nil {
-                    BreedInfoRow(name: "Life span", value: breed.life_span!)
+                if breed.lifeSpan != nil {
+                    BreedInfoRow(name: "Life span", value: breed.lifeSpan!)
                 }
                 
                 
                 
             }
             .padding(8)
+        }
+        .sheet(isPresented: $showWiki) {
+//            WebView(url: breed.wikipediaUrl)
         }
         
         

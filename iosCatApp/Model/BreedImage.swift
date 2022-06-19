@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BreedImage: Identifiable, Decodable {
+struct BreedImage: Codable {
     let id: String?
     let width: Int?
     let height: Int?

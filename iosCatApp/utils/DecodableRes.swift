@@ -7,10 +7,10 @@
 
 
 import Foundation
-
-struct DecodableRes<T: Decodable> {
-    let body: [T]
-}
-
-extension DecodableRes: Decodable {}
+//
+//struct DecodableRes<T: Decodable> {
+//    let body: [T]
+//}
+//
+//extension DecodableRes: Decodable {}
 

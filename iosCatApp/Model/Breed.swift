@@ -7,18 +7,35 @@
 
 import Foundation
 
-struct Breed: Identifiable, Decodable {
+struct Breed: Identifiable, Codable {
     let id: String
     let name: String
     let temperament: String
-    let life_span: String?
-    let alt_names: String?
-    let wikipedia_url: String?
+    let lifeSpan: String?
+    let altNames: String?
+    let wikipediaUrl: URL?
     let origin: String
-    let weight_imperial: String?	
+    let weightImperial: String?
     let description: String
     let image: BreedImage?
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case name
+        case temperament
+        case lifeSpan = "life_span"
+        case altNames = "alt_names"
+        case wikipediaUrl = "wikipedia_url"
+        case origin
+        case weightImperial = "weight_imperial"
+        case description
+        case image
+        
+    }
 }
+
+
+
 
 
 extension Breed {
@@ -27,25 +44,25 @@ extension Breed {
             id: "da",
             name: "some cat",
             temperament:  "friendly",
-            life_span: "4",
-            alt_names: "other cat",
-            wikipedia_url: "wiku",
+            lifeSpan: "4",
+            altNames: "other cat",
+            wikipediaUrl: URL(string: "wiku"),
             origin: "Izrael",
-            weight_imperial: "0.5",
+            weightImperial: "0.5",
             description: "lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum",
             image: .init(id: "ozEvzdVM-", width: 1200, height: 800, url: "https://cdn2.thecatapi.com/images/ozEvzdVM-.jpg")
         ),
         .init(
             id: "das",
-            name: "some cat 1",
+            name: "some cat3",
             temperament:  "friendly",
-            life_span: "4",
-            alt_names: "other cat",
-            wikipedia_url: "wiku",
+            lifeSpan: "4",
+            altNames: "other cat",
+            wikipediaUrl: URL(string: "wiku"),
             origin: "Izrael",
-            weight_imperial: "0.5",
+            weightImperial: "0.5",
             description: "lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum",
             image: .init(id: "ozEvzdVM-", width: 1200, height: 800, url: "https://cdn2.thecatapi.com/images/ozEvzdVM-.jpg")
-        )
+        ),
     ]
 }
