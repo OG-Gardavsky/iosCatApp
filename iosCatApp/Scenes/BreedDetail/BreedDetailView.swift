@@ -66,12 +66,16 @@ struct BreedDetailView: View {
                 if breed.lifeSpan != nil {
                     BreedInfoRow(name: "Life span", value: breed.lifeSpan!)
                 }
-                Divider()
                 
-                if breed.wikipediaUrl != nil {
-                    Text("Read more on")
-                    Button("Wikipedia") {
-                        showWiki = true
+                
+                
+                if (breed.wikipediaUrl != nil) {
+                    Divider()
+                    HStack {
+                        Text("Read more on")
+                        Button("Wikipedia") {
+                            showWiki = true
+                        }
                     }
                 }
                 
