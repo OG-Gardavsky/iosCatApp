@@ -50,7 +50,7 @@ extension Breed {
             origin: "Izrael",
             weightImperial: "0.5",
             description: "lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum, lorem ipsum",
-            image: .init(id: "ozEvzdVM-", width: 1200, height: 800, url: "https://cdn2.thecatapi.com/images/ozEvzdVM-.jpg")
+            image: nil
         ),
         .init(
             id: "das",

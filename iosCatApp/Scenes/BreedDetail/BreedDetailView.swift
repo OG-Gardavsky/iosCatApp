@@ -47,7 +47,9 @@ struct BreedDetailView: View {
                         }
                     )
                 } else  {
-                    Image(systemName: "xmark.bin")
+                    Image("placeholder-image")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
                 }
                 
                 Text(breed.description)

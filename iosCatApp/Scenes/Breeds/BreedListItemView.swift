@@ -31,15 +31,18 @@ struct BreedListItemView: View {
                 AsyncImage(
                     url: URL(string: breed.image!.url!),
                     content: { image in
-                        image.resizable()
-                             .aspectRatio(contentMode: .fit)
+                        image
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
                     },
                     placeholder: {
                         ProgressView()
                     }
                 )
             } else  {
-                Image(systemName: "xmark.bin")
+                Image("placeholder-image")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
             }
             
             Divider()
